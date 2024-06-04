@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const tipAmount = (bill * (tipPercentage / 100)) / people;
         const totalAmount = (bill / people) + tipAmount;
 
-        perPersonOutput.textContent = tipAmount.toFixed(2);
-        totalOutput.textContent = totalAmount.toFixed(2);
+        perPersonOutput.textContent = `$${tipAmount.toFixed(2)}`;
+        totalOutput.textContent = `$${totalAmount.toFixed(2)}`;
     }
 
     tipButtons.forEach(button => {
