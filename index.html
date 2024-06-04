@@ -9,38 +9,69 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <main>
     <div>
-      <img src="./images/logo.svg" alt="logo">
+      <img src="./images/logo.svg" alt="logo" class="logo">
     </div>
 
-    <div>
-      <label for="bill">Bill</label>
-      <input type="text" id="bill" placeholder="0">
+    <div class="calculator-container">
+      <div class="inputs-container">
+        <div class="bill-container">
+          <label for="bill">Bill</label>
+          <div class="input-container">
+            <img src="./images/icon-dollar.svg" alt="dollar">
+            <input type="text" id="bill" placeholder="0">
+          </div>
+        </div>
 
-      <div>Select Tip %</div>
-      <button class="tip-button" data-tip="5">5%</button>
-      <button class="tip-button" data-tip="10">10%</button>
-      <button class="tip-button" data-tip="15">15%</button>
-      <button class="tip-button" data-tip="25">25%</button>
-      <button class="tip-button" data-tip="50">50%</button>
-      Custom
+        <div class="tip-container">
+          <p>Select Tip %</p>
+          <div class="button-container">
+            <button class="tip-button" data-tip="5">5%</button>
+            <button class="tip-button" data-tip="10">10%</button>
+            <button class="tip-button" data-tip="15">15%</button>
+            <button class="tip-button" data-tip="25">25%</button>
+            <button class="tip-button" data-tip="50">50%</button>
+            <!-- Custom -->
+          </div>
+        </div>
 
-      <label for="people">Number of People</label>
-      <input type="text" id="people" placeholder="0">
-    </div>
+        <div class="people-container">
+          <label for="people">Number of People</label>
+          <div class="input-container">
+            <img src="./images/icon-person.svg" alt="">
+            <input type="text" id="people" placeholder="0">
+          </div>
+        </div>
+      </div>
 
-    <div>
-      <div>Tip Amount / person</div>
-      <p id="per-person">0.00</p>
+      <div class="results-container">
+        <div class="results-container-div">
+          <p class="results-container-para">
+            <span class="amount">Tip Amount</span>
+            <span class="per-person">/ person</span>
+          </p>
+          <p id="per-person" class="total"><span>$</span>0.00</p>
+        </div>
 
-      <div>Total / person</div>
-      <p id="total">0.00</p>
+        <div class="results-container-div">
+          <p class="results-container-para">
+            <span class="amount">Total</span>
+            <span class="per-person">/ person</span>
+          </p>
+          <p id="total" class="total"><span>$</span>0.00</p>
+        </div>
 
-      <button id="reset-button">Reset</button>
+        <button id="reset-button" class="reset-button">Reset</button>
+      </div>
     </div>
   </main>
   <script src="./script.js"></script>

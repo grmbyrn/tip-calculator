@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const bill = parseFloat(billInput.value);
         const people = parseInt(peopleInput.value);
 
-        if (isNaN(bill) || isNaN(people) || people <= 0) {
-            alert('Please enter valid inputs');
+        if (isNaN(bill) || isNaN(people) || bill <= 0 || people <= 0) {
             return;
         }
 
@@ -24,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tipButtons.forEach(button => {
         button.addEventListener('click', function () {
+            tipButtons.forEach(btn => btn.classList.remove('active'))
+            this.classList.add('active')
+
             const tipPercentage = parseFloat(this.getAttribute('data-tip'));
             calculateTip(tipPercentage);
         });
