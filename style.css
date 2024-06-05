@@ -135,6 +135,11 @@ main {
     border-radius: 5px;
 }
 
+.input-container:hover {
+    cursor: pointer;
+    outline: 2px solid #26C2AE;
+}
+
 .input-container img {
     height: 15px;
 }
@@ -143,6 +148,7 @@ main {
     border: none;
     background-color: #F3F9FA;
     text-align: right;
+    cursor: pointer;
 }
 
 .input-container input:focus {
@@ -169,6 +175,7 @@ main {
     width: 146px;
     padding: 10px 16px;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .tip-button:hover {
@@ -180,6 +187,15 @@ main {
 .tip-button.active {
     background-color: #26C2AE;
     color: #00474B;
+}
+
+.custom {
+    width: 146px;
+    border: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 16px;
 }
 
 .people-container {
@@ -227,12 +243,12 @@ main {
     border-radius: 5px;
     border: none;
     background-color: #26C2AE;
+    cursor: pointer;
 }
 
-.reset-button:hover {
+.reset-button:not([disabled]):hover {
     background-color: #9FE8DF;
     color: #00474B;
-    cursor: pointer;
 }
 
 @media only screen and (min-width: 1100px) {
@@ -246,7 +262,10 @@ main {
         margin-top: 88px;
     }
 
-    .inputs-container,
+    .inputs-container {
+        flex: 2;
+    }
+
     .results-container {
         flex: 1;
     }
