@@ -248,7 +248,7 @@ main {
 
 .reset-button:not([disabled]):hover {
     background-color: #9FE8DF;
-    color: #00474B;
+    color: #0D686D;
 }
 
 @media only screen and (min-width: 1100px) {

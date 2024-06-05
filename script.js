@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const peopleInput = document.getElementById('people');
     const perPersonOutput = document.getElementById('per-person');
     const totalOutput = document.getElementById('total');
-    const customInput = document.getElementById('custom-input')
+    const customInput = document.getElementById('custom-input');
     const resetButton = document.getElementById('reset-button');
     const tipButtons = document.querySelectorAll('.tip-button');
 
